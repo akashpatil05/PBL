@@ -1,0 +1,68 @@
+*{
+background-color: #d0c8d0;
+}
+h1{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+#box1{
+    height: 800px;
+    background-image: url(home.webp);
+    background-size: cover;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(67, 67, 67);
+}
+p{
+    background: transparent;
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+}
+a{
+    text-decoration: none;
+    background: transparent;
+}
+#found{
+    background-color: aquamarine;
+    font-size: 40px;
+    border-radius: 50%;
+    height: 100px;
+    /* width: 100px; */
+}
+#lost{
+    background-color: aquamarine;
+    font-size: 40px;
+    border-radius: 50%;
+    height: 100px;
+    width: 60px;
+}
+.box2{
+    display: flex;
+    position: relative;
+}
+#photo{
+    height: 700px;
+    /* width: 650px; */
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: white;
+    justify-content: baseline;
+}
+p1{
+    background: transparent;
+    font-size: 64px;
+}
+p2{
+    background: transparent;
+}
+p3{
+    background: transparent;
+}

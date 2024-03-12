@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="found.css">
+    <title>Found</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Found a Lost Item?</h2>
+        <form id="lostItemForm" enctype="multipart/form-data">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+    
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+    
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script>
+        // Add JavaScript for form validation or other functionality here
+        const form = document.getElementById('lostItemForm');
+        form.addEventListener('submit', function(event) {
+            // event.preventDefault(); // Prevent the form from submitting normally
+    
+            // You can add additional validation here before submitting the form
+    
+            // You can use AJAX to submit the form data to the server
+            const formData = new FormData(form);
+            fetch('submit_lost_item.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Lost item form submitted successfully!');
+                    form.reset(); // Reset the form after successful submission
+                } else {
+                    throw new Error('Failed to submit form');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to submit form. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
